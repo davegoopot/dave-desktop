@@ -1,0 +1,10 @@
+#!/bin/bash
+
+sudo sed -i 's/ftp.uk.debian.org/http.debian.net/' /etc/apt/sources.list
+sudo apt-get update
+sudo DEBIAN_FRONTEND=noninteractive apt-get autoremove
+sudo DEBIAN_FRONTEND=noninteractive apt-get upgrade -y
+sudo DEBIAN_FRONTEND=noninteractive apt-get install -y xfce4 iceweasel git php5-cli
+
+
+
